@@ -10,7 +10,8 @@ const postSignup = async (req, res) => {
         dob: dob
     });
 
-    try {
+    try{
+
         const savedUser = await user.save();
 
         res.json({
@@ -29,6 +30,31 @@ const postSignup = async (req, res) => {
 
 }
 
+const postLogin = async (req, res) => {
+    const {email, password } = req.body;
+
+    const user = await User.findOne({
+        email: email,
+        password: password
+    });
+
+    if(user){
+        return res.json({
+            success: true,
+            message: "Login successful",
+            data: user
+        })
+    }
+    else{
+        return res.json({
+            success: false,
+            message: "Invalid credentials",
+            data: null
+        })
+    }
+}
+
 export {
-    postSignup
+    postSignup,
+    postLogin
 }
