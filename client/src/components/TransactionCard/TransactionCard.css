@@ -5,6 +5,7 @@
     border-radius: 5px;
     box-shadow: 0 0 10px #f0f0f0;
     position: relative;
+    background-color: #e6ccff;
   }
   
   .transaction-card-title{
