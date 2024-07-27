@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import { postLogin, postSignup } from './controllers/user.js';
-import { getTransaction, postTransaction } from './controllers/transaction.js';
+import { getTransaction, postTransaction, deleteTransaction } from './controllers/transaction.js';
 dotenv.config();
 
 const app = express();
@@ -37,6 +37,8 @@ app.post('/login', postLogin )
 app.post('/transaction', postTransaction)
 
 app.get('/transactions', getTransaction)
+
+app.delete('/transaction/:id', deleteTransaction)
 
 app.listen(PORT, ()=>{
     console.log(`Server is running on port ${PORT}`)

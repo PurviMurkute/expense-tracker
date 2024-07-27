@@ -1,0 +1,46 @@
+.input-box{
+    display: block;
+    margin: 20px auto;
+    width: 90%;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.auth-form{
+    width: 250px;
+    border: 3px solid #6900cc;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    display: block;
+    margin: 10px auto;
+    border-radius: 5px;
+    background-color: #e6ccff;
+}
+
+.auth-heading{
+    text-align: center;
+    font-size: 20px;
+    color: #6900cc;
+}
+
+.btn{
+    background-color: #6900cc;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 15px;
+    border: none;
+    display: block;
+    margin: 0 auto;
+}
+
+.btn:hover{
+    background-color: #4e0692;
+    transition: 0.5s;
+}
+
+.auth-link{
+    font-size: 15px;
+    display: block;
+    margin: 10px auto;
+}
