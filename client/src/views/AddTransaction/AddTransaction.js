@@ -2,6 +2,7 @@ import axios from "axios";
 import "./AddTransaction.css";
 import { useState, useEffect } from 'react';
 import toast, {Toaster} from "react-hot-toast";
+import { Link } from "react-router-dom";
 
 function AddTransaction() {
   const [user, setUser] = useState('')
@@ -91,6 +92,9 @@ function AddTransaction() {
           Add Transaction
         </button>
       </form>
+      <Link to='/'>
+      <button type="button" className="home-btn">Go to Home</button>
+      </Link>
 
       <Toaster />
     </div>
